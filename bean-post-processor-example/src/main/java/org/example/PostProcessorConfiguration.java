@@ -7,11 +7,6 @@ import org.springframework.context.annotation.Configuration;
 public class PostProcessorConfiguration {
 
   @Bean
-  public static InjectRandomIntBeanPostProcessor injectRandomIntBeanPostProcessor() {
-    return new InjectRandomIntBeanPostProcessor();
-  }
-
-  @Bean
   public static ValidByRegexpBeanPostProcessor validByRegexpBeanPostProcessor() {
     return new ValidByRegexpBeanPostProcessor();
   }

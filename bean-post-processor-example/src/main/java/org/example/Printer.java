@@ -2,5 +2,5 @@ package org.example;
 
 public interface Printer {
 
-  void print(String alo);
+  void print(String string);
 }
