@@ -10,6 +10,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>bean-post-processor-example</module>
+    <module>scope-example</module>
   </modules>
 
   <properties>
