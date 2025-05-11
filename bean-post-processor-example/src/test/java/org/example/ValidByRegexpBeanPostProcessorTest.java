@@ -38,9 +38,24 @@ class ValidByRegexpBeanPostProcessorTest {
   void negativeCaseTest() {
     Printer testBean = context.getBean(Printer.class);
 
+    String errMessage =
+        "param №0 with value=test in method print don't matches regexp '^[A-Z].+[a-z]$'";
+
     Assertions.assertThrows(
         Exception.class,
         () -> testBean.print("test"),
-        "param №0 with value=test in method print don't matches regexp '^[A-Z].+[a-z]$'");
+        errMessage);
+    Assertions.assertThrows(
+        Exception.class,
+        () -> testBean.print("TesT"),
+        errMessage);
+    Assertions.assertThrows(
+        Exception.class,
+        () -> testBean.print("Test1"),
+        errMessage);
+    Assertions.assertThrows(
+        Exception.class,
+        () -> testBean.print("1Test"),
+        errMessage);
   }
 }
