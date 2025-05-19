@@ -11,6 +11,7 @@
   <modules>
     <module>bean-post-processor-example</module>
     <module>scope-example</module>
+    <module>prototype-lookup-example</module>
   </modules>
 
   <properties>
