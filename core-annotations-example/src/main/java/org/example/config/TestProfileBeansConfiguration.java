@@ -14,7 +14,8 @@ public class TestProfileBeansConfiguration {
 
   private final Environment environment;
 
-  public TestProfileBeansConfiguration(@Autowired Environment environment) {
+  @Autowired
+  public TestProfileBeansConfiguration(Environment environment) {
     this.environment = environment;
   }
 

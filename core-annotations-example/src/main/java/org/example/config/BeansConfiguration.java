@@ -19,7 +19,8 @@ public class BeansConfiguration {
 
   private final Environment environment;
 
-  public BeansConfiguration(@Autowired Environment environment) {
+  @Autowired
+  public BeansConfiguration(Environment environment) {
     this.environment = environment;
   }
 
